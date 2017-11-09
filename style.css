@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  padding: 5px
+}
+img{
+  border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 350px;
+    height: 262.5px;
+}
+ul{
+  list-style: none
+}
+a {
+    display:inline;
+}
+a:after {
+    content:"\a";
+    white-space: pre;
+}
+h2{
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+.main{
+  image: url('https://images-na.ssl-images-amazon.com/images/I/61DbGBRc8zL._SY355_.jpg');
+  align-self: center;
+  text-align: center;
+  opacity: 0.85;
+}
+
+.head1{
+background-image: url('https://images-na.ssl-images-amazon.com/images/I/61DbGBRc8zL._SY355_.jpg');
+  align-self: center;
+  text-align: center;
+}
+.head2{
+background-image: url('https://images-na.ssl-images-amazon.com/images/I/61DbGBRc8zL._SY355_.jpg');
+  align-self: center;
+  text-align: center;
+}
+
+.nav1{
+background-image: url('https://images-na.ssl-images-amazon.com/images/I/61DbGBRc8zL._SY355_.jpg');
+  align-self: center;
+  text-align: center;
+}
+.nav2{
+background-image: url('https://images-na.ssl-images-amazon.com/images/I/61DbGBRc8zL._SY355_.jpg');
+    align-self: center;
+    text-align: center;
+}
+.side{
+background-image: url('https://images-na.ssl-images-amazon.com/images/I/61DbGBRc8zL._SY355_.jpg');
+  background: #eee;
+  align-self: center;
+  opacity: 0.9;
+}
+.foot{
+background-image: url('https://images-na.ssl-images-amazon.com/images/I/61DbGBRc8zL._SY355_.jpg');
+  align-self: center;
+  text-align: center;
+}
+/*//^^^^simple style^^^^^//*/
+/*//vvvvv Grid Style vvvvv//*/
+
+.nav1{
+grid-area: nav1;
+}
+.nav2{
+grid-area: nav2;
+}
+.head1{
+grid-area: hd1;
+}
+.head2{
+grid-area: hd2;
+}
+.main{
+grid-area: main;
+}
+
+.side{
+grid-area: side;
+}
+
+.foot{
+grid-area: foot;
+}
+
+.grid{
+height: 100vh;
+width: 100vw;
+display: grid;
+grid-template-columns: repeat(3, ifr);
+grid-column-gap: 3px;
+grid-template-areas:
+'hd1 main nav1'
+'hd1 foot nav1'
+'hd2 side nav2'
+'hd2 side nav2'
+}
+
+@media screen and (max-width: 800px) {
+  .grid{
+    grid-template-columns: auto 20%;
+    grid-template-areas:
+    'main'
+    'nav1'
+    'nav2'
+    'hd1'
+    'hd2'
+    'foot'
+    'side'
+  }
+}
